@@ -1,7 +1,16 @@
 import readCSV
-import numpy.linalg
+import decomps
+import numpy as np
 
 
 array = readCSV.readCSV('test.csv')
-q, r = np.linalg.qr(array)
-np.allclose(a, np.dot(q, r))
+farray = decomps.strgToFloat(array)
+#print(farray)
+#print(decomps.QRDecomp(farray))
+#print(decomps.EigDecomp(farray))
+
+'''
+print(q)
+print(r)
+print(np.dot(q,r)) 
+'''
